@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/navbar`);
       const data = await res.json();
-      // handle array or object responses (backend may return [doc] or doc)
+  
       return Array.isArray(data) ? data[0] || null : data;
     } catch (error) {
       console.error("Get Navbar error:", error);
@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // AppContext.jsx
+// AppContext.jsx
   const addUpdateNavbar = async (formData, id) => {
     try {
       const res = await fetch(

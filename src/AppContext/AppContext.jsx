@@ -7,6 +7,7 @@ export const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
+  const [isClient, setIsClient] = useState(false);
 
   const isBrowser = true;
 
@@ -445,15 +446,19 @@ export const AuthProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    if (isBrowser) {
+    setIsClient(true);
+    // load token/user from localStorage inside try/catch
+    try {
       const savedToken = localStorage.getItem("token");
       const savedUser = localStorage.getItem("user");
       if (savedToken && savedUser) {
         setToken(savedToken);
         setUser(JSON.parse(savedUser));
       }
+    } catch (err) {
+      console.warn("localStorage not available", err);
     }
-  }, [isBrowser]);
+  }, []);
 
   return (
     <AuthContext.Provider

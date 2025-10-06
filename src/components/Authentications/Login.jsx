@@ -1,9 +1,10 @@
 "use client";
 
 import { AuthContext } from "@/AppContext/AppContext";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+
 
 const Login = () => {
   const { login } = useContext(AuthContext);

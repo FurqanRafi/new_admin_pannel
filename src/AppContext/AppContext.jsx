@@ -8,6 +8,8 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
 
+  const isBrowser = typeof window !== "undefined";
+
   const register = async (username, email, password, phone) => {
     console.log("Fetch Succesfully", process.env.NEXT_PUBLIC_BACKEND_API);
     try {
@@ -39,16 +41,21 @@ export const AuthProvider = ({ children }) => {
       if (res.ok) {
         setUser(data.user);
         setToken(data.token);
-        console.log(data);
-        localStorage.setItem("token", data.token);
-        localStorage.setItem("user", JSON.stringify(data.user));
+        console.log("Login success:", data);
+
+        // ✅ Safe localStorage usage
+        if (isBrowser) {
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("user", JSON.stringify(data.user));
+        }
+
         return true;
       } else {
         alert(data.message || "Login failed");
         return false;
       }
     } catch (error) {
-      console.log(error);
+      console.error("Login error:", error);
       return false;
     }
   };
@@ -56,8 +63,10 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setToken(null);
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    if (isBrowser) {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user");
+    }
   };
 
   const createNavbar = async (formData) => {
@@ -78,7 +87,7 @@ export const AuthProvider = ({ children }) => {
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}/navbar`);
       const data = await res.json();
-  
+
       return Array.isArray(data) ? data[0] || null : data;
     } catch (error) {
       console.error("Get Navbar error:", error);
@@ -86,7 +95,7 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-// AppContext.jsx
+  // AppContext.jsx
   const addUpdateNavbar = async (formData, id) => {
     try {
       const res = await fetch(

@@ -1,5 +1,4 @@
-"use client";
-import { BrowserRouter } from "react-router-dom";
+"use client"
 import { AuthContext } from "@/AppContext/AppContext";
 import Login from "@/components/Authentications/Login";
 import Slidebar from "@/components/Slidebar/Slidebar";
@@ -10,12 +9,10 @@ const PageLayout = ({ children }) => {
   if (user || token) {
     return (
       <>
-      <BrowserRouter>
         <div className="w-[15%] min-h-screen ">
           <Slidebar />
         </div>
         <div className="w-[85%] min-h-screen">{children}</div>
-      </BrowserRouter>
       </>
     );
   } else {

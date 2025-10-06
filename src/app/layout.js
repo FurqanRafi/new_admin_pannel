@@ -1,8 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ClientLayout from "./ClientLayout";
-import { AuthProvider } from "@/AppContext/AppContext";
-import { BrowserRouter } from "react-router-dom";
+import ClientWrapper from "./ClientWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +23,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} flex antialiased`}
       >
-        <BrowserRouter>
-          <AuthProvider>
-            <ClientLayout>{children}</ClientLayout>
-          </AuthProvider>
-        </BrowserRouter>
+        <ClientWrapper>{children}</ClientWrapper>
       </body>
     </html>
   );

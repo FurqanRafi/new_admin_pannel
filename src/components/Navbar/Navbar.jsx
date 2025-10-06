@@ -71,7 +71,7 @@ const Navbar = () => {
   };
 
   // Load current navbar when component mounts
-  const [logo, setLogo] = useState("/logo");
+  const [logo, setLogo] = useState("");
   const [navlinks, setNavlinks] = useState([{ name: "", url: "" }]);
   const [btntext, setBtntext] = useState("");
   const [btnlink, setBtnlink] = useState("");

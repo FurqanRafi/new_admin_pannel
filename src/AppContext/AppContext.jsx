@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
 
-  const isBrowser = typeof window !== "undefined";
+  const isBrowser = true;
 
   const register = async (username, email, password, phone) => {
     console.log("Fetch Succesfully", process.env.NEXT_PUBLIC_BACKEND_API);

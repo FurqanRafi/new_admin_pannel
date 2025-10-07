@@ -87,7 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-start py-10 justify-center">
+    <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
@@ -111,7 +111,7 @@ const Hero = () => {
           </div>
         </div>
       )}
-      <div className="w-[95%] h-[95%] backdrop-blur-xl bg-[#ffffff]/[35] border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
+      <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
         <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
           Hero Section Dashboard
@@ -145,7 +145,7 @@ const Hero = () => {
 
                 {/* Display Hero Data */}
 
-                <div className="flex flex-col md:flex-row gap-10 items-center">
+                <div className="flex flex-col md:flex-row gap-10 items-center backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
                   {/* Left - Text Content */}
                   <div className="flex-1 flex flex-col gap-6">
                     <div className="mt-8">
@@ -235,7 +235,7 @@ const Hero = () => {
           </div>
 
           {/* Create Hero Section */}
-          <div className="w-full h-[80%] mt-7">
+          <div className="w-full h-[80%] mt-7 backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
             <h1 className="text-[#242220] text-2xl font-semibold">
               Create Hero Section
             </h1>

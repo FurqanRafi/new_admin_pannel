@@ -138,6 +138,13 @@ const Cards = () => {
                   </h2>
                   <div className="flex gap-5">
                     <button
+                      className="px-7 py-2 bg-[#B75826] text-white rounded-full hover:bg-[#9c4519] transition-all"
+                      onClick={updateHandler}
+                    >
+                      Update
+                    </button>
+
+                    <button
                       onClick={() => setPopup(true)}
                       className="px-7 py-2 bg-[#B75826] text-white rounded-full"
                     >
@@ -151,7 +158,7 @@ const Cards = () => {
                     Cards Section
                   </h2>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="p-5 border border-amber-200/40 rounded-xl bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md hover:scale-105 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] transition-all duration-300">
                       <img
                         src={cardsData.Cardimg1 ?? ""}
@@ -211,7 +218,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card1.jpg"
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
                       value={formData.cardimg1 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg1: e.target.value });
@@ -223,7 +230,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card2.jpg"
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
                       value={formData.cardimg2 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg2: e.target.value });
@@ -235,7 +242,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card3.jpg"
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
                       value={formData.cardimg3 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg3: e.target.value });
@@ -247,7 +254,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card4.jpg"
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
                       value={formData.cardimg4 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg4: e.target.value });

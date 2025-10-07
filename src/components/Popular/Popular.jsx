@@ -48,6 +48,17 @@ const Popular = () => {
     setUpdatePopular(false);
   };
 
+  const updateHandler = async () => {
+    if (popularData) {
+      setFormData({
+        title: popularData?.title || "",
+        description: popularData?.description || "",
+        topimg: popularData?.topimg || "",
+      });
+    }
+    setUpdatePopular(true);
+  };
+
   const deleteHandler = async () => {
     try {
       console.log(popularId, "asdasd");
@@ -124,6 +135,12 @@ const Popular = () => {
                 </h2>
                 <div className="flex gap-4">
                   <button
+                    className="px-7 py-2 bg-[#B75826] text-white rounded-full hover:bg-[#9c4519] transition-all"
+                    onClick={updateHandler}
+                  >
+                    Update
+                  </button>
+                  <button
                     onClick={() => setPopup(true)}
                     className="px-6 py-2 bg-[#B75826] rounded-full text-white"
                   >
@@ -138,7 +155,7 @@ const Popular = () => {
                     <label className="block text-sm font-medium text-white/80">
                       Popular Heading
                     </label>
-                    <p className="text-[#242220] bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1">
+                    <p className="text-white bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1">
                       {popularData.title}
                     </p>
                   </div>
@@ -146,7 +163,7 @@ const Popular = () => {
                     <label className="block text-sm font-medium text-white/80">
                       Popular Paragraph
                     </label>
-                    <p className="text-[#242220] bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1 leading-relaxed">
+                    <p className="text-white bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1 leading-relaxed">
                       {popularData.description}
                     </p>
                   </div>
@@ -160,7 +177,7 @@ const Popular = () => {
                     <img
                       src={popularData.topimg}
                       alt={popularData.topimg}
-                      className="w-full max-w-xs px-10 py-10 text-black rounded-xl border border-[#ffffff]/[0.2]"
+                      className="w-full max-w-xs px-10 py-10 text-white rounded-xl border border-[#ffffff]/[0.2]"
                     />
                   </div>
                 </div>
@@ -193,7 +210,7 @@ const Popular = () => {
                   onChange={(e) => {
                     setFormData({ ...formData, title: e.target.value });
                   }}
-                  className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-[#242220] focus:outline-none"
+                  className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-white focus:outline-none"
                 />
               </div>
               <div>
@@ -207,7 +224,7 @@ const Popular = () => {
                   onChange={(e) => {
                     setFormData({ ...formData, topimg: e.target.value });
                   }}
-                  className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-[#242220] focus:outline-none"
+                  className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-white focus:outline-none"
                 />
               </div>
             </div>
@@ -223,7 +240,7 @@ const Popular = () => {
                 onChange={(e) => {
                   setFormData({ ...formData, description: e.target.value });
                 }}
-                className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-[#242220] focus:outline-none resize-none"
+                className="w-full px-4 py-2 bg-[#ffffff]/[0.3] border border-[#ffffff]/[0.2] rounded-xl text-white focus:outline-none resize-none"
               ></textarea>
             </div>
 

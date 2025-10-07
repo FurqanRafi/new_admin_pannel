@@ -33,6 +33,7 @@ const Hero = () => {
       setHeroData(null);
       setHeroId(null);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -163,7 +164,7 @@ const Hero = () => {
                 <div className="flex flex-col md:flex-row gap-10 items-center ">
                   {/* Left - Text Content */}
                   <div className="flex-1 text-white flex flex-col gap-6">
-                    <div className="mt-8">
+                    <div className="mt-8 text-white">
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Title
                       </div>
@@ -171,7 +172,7 @@ const Hero = () => {
                         {heroData.title}
                       </div>
                     </div>
-                    <div className="mt-8">
+                    <div className="mt-8 text-white">
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Heading
                       </div>
@@ -180,7 +181,7 @@ const Hero = () => {
                         {heroData.heading}
                       </div>
                     </div>
-                    <div className="mt-8">
+                    <div className="mt-8 text-white">
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Description
                       </div>
@@ -199,7 +200,7 @@ const Hero = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-2 gap-6">
+                      <div className="grid grid-cols-2 gap-6 text-white">
                         <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                           {heroData.btntext}
                         </div>
@@ -212,7 +213,7 @@ const Hero = () => {
 
                   {/* Right - Images */}
                   <div className="flex-col gap-5">
-                    <div className="flex-1">
+                    <div className="flex-1 text-white">
                       <div className="font-bold text-xl uppercase tracking-wide mb-2 px-4">
                         Hero Image
                       </div>
@@ -225,14 +226,14 @@ const Hero = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                      <div className="font-bold text-xl uppercase tracking-wide mb-2 mt-5 px-4">
+                      <div className="font-bold text-white text-xl uppercase tracking-wide mb-2 mt-5 px-4">
                         Side Imag
                       </div>
                       <div className="p-10  border border-amber-100/40 rounded-lg bg-white/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
                         <img
                           src={heroData.sideimg}
                           alt="Logo"
-                          className="w-full h-auto"
+                          className="w-full h-auto text-white"
                         />
                       </div>
                     </div>

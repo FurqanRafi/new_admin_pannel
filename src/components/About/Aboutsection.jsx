@@ -490,7 +490,7 @@ const Aboutsection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, title: e.target.value })
                   }
-                  className="w-full p-2 border rounded-md"
+                  className="w-full p-2 text-white border rounded-md"
                 />
               </div>
 
@@ -503,7 +503,7 @@ const Aboutsection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, description: e.target.value })
                   }
-                  className="w-full p-2 border rounded-md resize-none"
+                  className="w-full p-2 text-white border rounded-md resize-none"
                 ></textarea>
               </div>
 
@@ -517,7 +517,7 @@ const Aboutsection = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, aboutimg: e.target.value })
                     }
-                    className="w-full p-2 border rounded-md"
+                    className="w-full p-2 border rounded-md text-white"
                   />
                 </div>
                 <div className="flex flex-col gap-3">
@@ -531,7 +531,7 @@ const Aboutsection = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, upperimg: e.target.value })
                     }
-                    className="w-full p-2 border rounded-md"
+                    className="w-full p-2 border rounded-md text-white"
                   />
                 </div>
               </div>
@@ -552,7 +552,7 @@ const Aboutsection = () => {
                           [`img${i}`]: e.target.value,
                         })
                       }
-                      className="w-full p-2 border rounded-md"
+                      className="w-full p-2 border rounded-md text-white"
                     />
                   </div>
                 ))}
@@ -615,7 +615,7 @@ const Aboutsection = () => {
                     Title
                   </div>
                 </div>
-                <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                <div className="p-5 text-white bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                   {aboutData.title}
                 </div>
               </div>
@@ -627,7 +627,7 @@ const Aboutsection = () => {
                     Description
                   </div>
                 </div>
-                <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                <div className="p-5 text-white bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                   {aboutData.description}
                 </div>
               </div>
@@ -642,14 +642,14 @@ const Aboutsection = () => {
                     <img
                       src={aboutData.upperimg}
                       alt="Upper"
-                      className="w-full h-auto"
+                      className="w-full h-auto text-white"
                     />
                   </div>
                   <div className="px-8 py-20 border border-amber-100/40 rounded-lg bg-white/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
                     <img
                       src={aboutData.aboutimg}
                       alt="Main"
-                      className="w-full h-auto"
+                      className="w-full h-auto text-white"
                     />
                   </div>
                 </div>
@@ -676,7 +676,7 @@ const Aboutsection = () => {
                         <img
                           src={img}
                           alt={`Gallery ${idx + 1}`}
-                          className="w-full h-32 object-cover rounded-lg"
+                          className="w-full h-32 object-cover rounded-lg text-white"
                         />
                       </div>
                     )

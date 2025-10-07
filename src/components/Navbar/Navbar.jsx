@@ -377,7 +377,7 @@ const Navbar = () => {
               <div className="font-bold text-white text-xl uppercase tracking-wide mb-4 px-4">
                 Logo
               </div>
-              <div className="px-8 py-20 w-1/4 border border-amber-100/40 rounded-lg bg-white/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="px-8 text-white py-20 w-1/4 border border-amber-100/40 rounded-lg bg-white/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
                 <img src={logo} alt={logo} className="w-full h-auto" />
               </div>
             </div>
@@ -453,7 +453,7 @@ const Navbar = () => {
                         </span>
                       </div>
                       <div className="pl-5">
-                        <span className="text-gray-600 text-sm truncate block">
+                        <span className="text-white text-sm truncate block">
                           {link.url}
                         </span>
                       </div>
@@ -475,11 +475,11 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-6">
-              <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+            <div className="grid grid-cols-2 gap-6 text-white">
+              <div className="p-5 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                 {btntext}
               </div>
-              <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+              <div className="p-5 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                 {btnlink}
               </div>
             </div>

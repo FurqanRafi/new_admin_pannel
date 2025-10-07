@@ -243,7 +243,7 @@ const Footer = () => {
                     {/* Logo - Left Side */}
                     <div className="lg:w-1/3 flex flex-col items-center justify-center">
                       <div className="w-full p-6 rounded-xl bg-gradient-to-br from-white/80 to-amber-50/60 border border-amber-300/40 shadow-inner">
-                        <h3 className="font-semibold text-amber-800 mb-4 text-center text-lg">
+                        <h3 className="font-semibold text-white mb-4 text-center text-lg">
                           Brand Logo
                         </h3>
                         <div className="flex justify-center items-center bg-white/40 rounded-lg p-4">
@@ -260,7 +260,7 @@ const Footer = () => {
                     <div className="lg:w-2/3 flex flex-col gap-5">
                       {/* Description */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-amber-800 mb-3 text-lg flex items-center gap-2">
+                        <h3 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                           Description
                         </h3>
@@ -271,7 +271,7 @@ const Footer = () => {
 
                       {/* Copyright */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-amber-800 mb-3 text-lg flex items-center gap-2">
+                        <h3 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                           Copyright
                         </h3>
@@ -285,7 +285,7 @@ const Footer = () => {
 
                 {/* Address & Map Section */}
                 <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-                  <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
+                  <h3 className="font-bold text-white mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Location Information
                   </h3>
@@ -293,7 +293,7 @@ const Footer = () => {
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Address */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-amber-800 mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Address
                       </h4>
@@ -304,7 +304,7 @@ const Footer = () => {
 
                     {/* Map Embed */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-amber-800 mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Map Location
                       </h4>
@@ -332,7 +332,7 @@ const Footer = () => {
 
                 {/* Social Links Section */}
                 <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-                  <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
+                  <h3 className="font-bold text-white mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Social Media Links
                   </h3>
@@ -379,8 +379,8 @@ const Footer = () => {
                 </div>
 
                 {/* Navigation Links Section */}
-                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-                  <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
+                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                  <h3 className="font-bold text-white mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Navigation Links
                   </h3>
@@ -415,7 +415,7 @@ const Footer = () => {
 
                 {/* Quick Links Section */}
                 <div className="p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-                  <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
+                  <h3 className="font-bold text-white mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Quick Links
                   </h3>
@@ -462,9 +462,7 @@ const Footer = () => {
 
           {/* Create Footer Form */}
           <div className="w-full mt-7">
-            <h1 className="text-[#242220] text-2xl font-semibold">
-              Create Footer
-            </h1>
+            <h1 className="text-white text-2xl font-semibold">Create Footer</h1>
             <div className="w-full px-10 rounded-2xl bg-transparent border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
               <form onSubmit={submitHandler} className="space-y-6 py-10">
                 {/* Logo */}
@@ -511,7 +509,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "plateform", e.target.value)
                         }
-                        className="w-1/4 p-2 border border-[#ffffff] rounded-xl"
+                        className="w-1/4 p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <input
                         type="text"
@@ -520,7 +518,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "icon", e.target.value)
                         }
-                        className="w-1/4 p-2 border border-[#ffffff] rounded-xl"
+                        className="w-1/4 p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <input
                         type="text"
@@ -529,7 +527,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "url", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <button
                         className="px-3 py-1 bg-[#B75826] hover:bg-red-700 text-white rounded-full"
@@ -563,7 +561,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateMenu(index, "names", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <input
                         type="text"
@@ -572,7 +570,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateMenu(index, "links", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <button
                         type="button"
@@ -603,7 +601,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateService(index, "name", e.target.value)
                         }
-                        className="w-1/3 p-2 border border-[#ffffff] rounded-xl"
+                        className="w-1/3 p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <input
                         type="text"
@@ -612,7 +610,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateService(index, "link", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
                       />
                       <button
                         type="button"
@@ -645,7 +643,7 @@ const Footer = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, address: e.target.value })
                       }
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
                     />
                   </div>
                   <div className="flex flex-col gap-3">
@@ -662,7 +660,7 @@ const Footer = () => {
                           mapEmbedUrl: e.target.value,
                         })
                       }
-                      className="w-full p-3 border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
                     />
                   </div>
                 </div>
@@ -679,7 +677,7 @@ const Footer = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, copyright: e.target.value })
                     }
-                    className="w-full p-3 border border-[#ffffff] rounded-xl"
+                    className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
                   />
                 </div>
 

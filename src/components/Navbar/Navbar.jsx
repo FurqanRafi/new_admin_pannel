@@ -145,7 +145,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 gap-10 ">
-      <div className="w-[95%] h-[95%] backdrop-blur-xl bg-[#FFEDE0]/[23] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
+      <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
           Navbar Dashboard
         </h1>
@@ -163,7 +163,7 @@ const Navbar = () => {
               setCreate(!create);
               setUpdate(false);
             }}
-            className="px-7 py-3 bg-[#B75826] rounded-full mb-5"
+            className="px-7 py-3 bg-[#B75826] text-white rounded-full mb-5"
             disabled={logo}
           >
             {create ? "Close Form" : "Create Navbar"}
@@ -362,7 +362,7 @@ const Navbar = () => {
               <div className="font-bold text-xl uppercase tracking-wide mb-4 px-4">
                 Logo
               </div>
-              <div className="px-8 py-20 w-1/4 border border-amber-100/40 rounded-lg bg-white/30 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
+              <div className="px-8 py-20 w-1/4 border border-amber-100/40 rounded-lg bg-white/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
                 <img src={logo} alt={logo} className="w-full h-auto" />
               </div>
             </div>

@@ -87,7 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
+    <div className="w-full min-h-screen flex items-start py-10 justify-center ">
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">

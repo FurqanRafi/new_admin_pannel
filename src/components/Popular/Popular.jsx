@@ -64,7 +64,7 @@ const Popular = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
+    <div className="w-full min-h-screen flex items-start py-10 justify-center  backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
@@ -88,7 +88,7 @@ const Popular = () => {
           </div>
         </div>
       )}
-      <div className="w-[95%] h-[95%] backdrop-blur-xl border border-[#ffffff]/[0.1] shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl p-6">
+      <div className="w-[95%] h-[95%]  rounded-xl p-6">
         {/* Header */}
 
         <h1 className="text-3xl font-bold text-[#242220] mb-2">

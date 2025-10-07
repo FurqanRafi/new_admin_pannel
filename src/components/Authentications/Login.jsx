@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useContext, useState } from "react";
 
-
 const Login = () => {
   const { login } = useContext(AuthContext);
   const router = useRouter();
@@ -40,7 +39,7 @@ const Login = () => {
             required
           />
           <button
-            className="px-3 py-2 rounded-lg bg-[#B75826] text-xl font-semibold"
+            className="px-3 py-2 rounded-lg text-whit bg-[#B75826] text-xl font-semibold"
             type="submit"
           >
             Login

@@ -211,7 +211,7 @@ const Footer = () => {
           {footerData ? (
             <>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl text-[#242220] font-semibold">
+                <h2 className="text-2xl text-white font-semibold">
                   Current Footer
                 </h2>
                 <div className="flex gap-5">
@@ -233,7 +233,7 @@ const Footer = () => {
               {/* Display Footer */}
 
               <div className="w-full rounded-3xl backdrop-blur-xl border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] p-8 mt-5">
-                <h2 className="text-3xl text-[#242220] font-bold mb-8 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text">
+                <h2 className="text-3xl text-white font-bold mb-8 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text">
                   Footer Configuration
                 </h2>
 
@@ -243,7 +243,7 @@ const Footer = () => {
                     {/* Logo - Left Side */}
                     <div className="lg:w-1/3 flex flex-col items-center justify-center">
                       <div className="w-full p-6 rounded-xl bg-gradient-to-br from-white/80 to-amber-50/60 border border-amber-300/40 shadow-inner">
-                        <h3 className="font-semibold text-white mb-4 text-center text-lg">
+                        <h3 className="font-semibold text-[#242220] mb-4 text-center text-lg">
                           Brand Logo
                         </h3>
                         <div className="flex justify-center items-center bg-white/40 rounded-lg p-4">
@@ -260,7 +260,7 @@ const Footer = () => {
                     <div className="lg:w-2/3 flex flex-col gap-5">
                       {/* Description */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
+                        <h3 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                           Description
                         </h3>
@@ -271,7 +271,7 @@ const Footer = () => {
 
                       {/* Copyright */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
+                        <h3 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
                           <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                           Copyright
                         </h3>
@@ -293,7 +293,7 @@ const Footer = () => {
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Address */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Address
                       </h4>
@@ -304,7 +304,7 @@ const Footer = () => {
 
                     {/* Map Embed */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-white mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Map Location
                       </h4>
@@ -463,11 +463,11 @@ const Footer = () => {
           {/* Create Footer Form */}
           <div className="w-full mt-7">
             <h1 className="text-white text-2xl font-semibold">Create Footer</h1>
-            <div className="w-full px-10 rounded-2xl bg-transparent border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
+            <div className="w-full px-10 rounded-2xl text-white bg-transparent border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
               <form onSubmit={submitHandler} className="space-y-6 py-10">
                 {/* Logo */}
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">Logo URL</label>
+                  <label className="font-medium">Logo URL</label>
                   <input
                     type="text"
                     placeholder="https://example.com/logo.png"
@@ -475,15 +475,13 @@ const Footer = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, logo: e.target.value })
                     }
-                    className="w-full p-3 border border-[#ffffff] rounded-xl"
+                    className="w-full p-3 border border-[#ffffff]/30 rounded-xl"
                   />
                 </div>
 
                 {/* Description */}
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">
-                    Description
-                  </label>
+                  <label className="font-medium">Description</label>
                   <textarea
                     rows="3"
                     placeholder="Write footer description..."
@@ -491,15 +489,13 @@ const Footer = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, description: e.target.value })
                     }
-                    className="w-full p-3 border border-[#ffffff] rounded-xl"
+                    className="w-full p-3 border border-[#ffffff]/30 rounded-xl"
                   ></textarea>
                 </div>
 
                 {/* Social Links */}
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">
-                    Social Links
-                  </label>
+                  <label className="font-medium">Social Links</label>
                   {formData.socaillinks.map((link, index) => (
                     <div key={index} className="flex gap-2">
                       <input
@@ -509,7 +505,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "plateform", e.target.value)
                         }
-                        className="w-1/4 p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-1/4 p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <input
                         type="text"
@@ -518,7 +514,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "icon", e.target.value)
                         }
-                        className="w-1/4 p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-1/4 p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <input
                         type="text"
@@ -527,7 +523,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateSocialLink(index, "url", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <button
                         className="px-3 py-1 bg-[#B75826] hover:bg-red-700 text-white rounded-full"
@@ -549,9 +545,7 @@ const Footer = () => {
 
                 {/* Menu */}
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">
-                    Menu Items
-                  </label>
+                  <label className="font-medium">Menu Items</label>
                   {formData.navlinks.map((menu, index) => (
                     <div key={index} className="flex gap-2">
                       <input
@@ -561,7 +555,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateMenu(index, "names", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <input
                         type="text"
@@ -570,7 +564,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateMenu(index, "links", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <button
                         type="button"
@@ -591,7 +585,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">Services</label>
+                  <label className="font-medium">Services</label>
                   {formData.quicklinks.map((service, index) => (
                     <div key={index} className="flex gap-2">
                       <input
@@ -601,7 +595,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateService(index, "name", e.target.value)
                         }
-                        className="w-1/3 p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-1/3 p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <input
                         type="text"
@@ -610,7 +604,7 @@ const Footer = () => {
                         onChange={(e) =>
                           updateService(index, "link", e.target.value)
                         }
-                        className="w-full p-2 border border-[#ffffff]/[0.1] rounded-xl"
+                        className="w-full p-2 border border-[#ffffff]/30 rounded-xl"
                       />
                       <button
                         type="button"
@@ -633,9 +627,7 @@ const Footer = () => {
                 {/* Location */}
                 <div className="grid grid-cols-2 gap-5">
                   <div className="flex flex-col gap-3">
-                    <label className="text-[#242220] font-medium">
-                      Address
-                    </label>
+                    <label className="font-medium">Address</label>
                     <input
                       type="text"
                       placeholder="Street, City"
@@ -643,13 +635,11 @@ const Footer = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, address: e.target.value })
                       }
-                      className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
+                      className="w-full p-3 border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label className="text-[#242220] font-medium">
-                      Map Embed URL
-                    </label>
+                    <label className="font-medium">Map Embed URL</label>
                     <input
                       type="text"
                       placeholder="https://google.com/maps..."
@@ -660,16 +650,14 @@ const Footer = () => {
                           mapEmbedUrl: e.target.value,
                         })
                       }
-                      className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
+                      className="w-full p-3 border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-medium">
-                    Copyright
-                  </label>
+                  <label className="font-medium">Copyright</label>
                   <input
                     type="text"
                     placeholder="© 2025 Your Company"
@@ -677,7 +665,7 @@ const Footer = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, copyright: e.target.value })
                     }
-                    className="w-full p-3 border border-[#ffffff]/[0.1] rounded-xl"
+                    className="w-full p-3 border border-[#ffffff]/30 rounded-xl"
                   />
                 </div>
 

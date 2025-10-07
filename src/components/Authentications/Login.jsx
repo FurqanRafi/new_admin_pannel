@@ -16,7 +16,7 @@ const Login = () => {
     setLoading(true);
     const result = await login(email, password);
     if (result) {
-      router.push("/navbar");
+      router.push("/");
     } else {
       alert("Invalid Email or Password");
     }

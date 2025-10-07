@@ -416,7 +416,7 @@ const Aboutsection = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading ABOUT...
           </p>
         </div>
@@ -430,7 +430,7 @@ const Aboutsection = () => {
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+            <h2 className="text-lg font-semibold text-[#a15102] mb-4">
               Are you sure you want to Delete?
             </h2>
             <div className="flex justify-around mt-4">
@@ -442,7 +442,7 @@ const Aboutsection = () => {
               </button>
               <button
                 onClick={() => setPopup(false)}
-                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+                className="bg-gray-300 text-[#a15102] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
               >
                 No
               </button>
@@ -453,13 +453,13 @@ const Aboutsection = () => {
 
       {/* Create/Update Section */}
       <div className="w-[95%] backdrop-blur-xl border-[#F5EFEB]/[0.20] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
-        <h1 className="text-3xl py-7 px-5 font-bold text-white">
+        <h1 className="text-3xl py-7 px-5 font-bold text-[#a15102]">
           About Section Dashboard
         </h1>
 
         <div className="px-5 pb-7">
           <div className="flex justify-between items-center mb-5">
-            <h2 className="text-2xl text-white font-semibold">
+            <h2 className="text-2xl text-[#a15102] font-semibold">
               Current About Section
             </h2>
           </div>

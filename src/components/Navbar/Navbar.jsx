@@ -152,7 +152,7 @@ const Navbar = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading Navbar...
           </p>
         </div>
@@ -163,13 +163,13 @@ const Navbar = () => {
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 gap-10 ">
       <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
-        <h1 className="text-3xl py-7 px-5 font-bold text-white">
+        <h1 className="text-3xl py-7 px-5 font-bold text-[#a15102]">
           Navbar Dashboard
         </h1>
 
         <div className="px-5 pb-7">
           <div className="flex justify-between items-center mb-5">
-            <h2 className="text-2xl text-white font-semibold">
+            <h2 className="text-2xl text-[#a15102] font-semibold">
               Current Navbar
             </h2>
           </div>
@@ -193,7 +193,9 @@ const Navbar = () => {
               className="space-y-4 p-5 backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] "
             >
               <div className="flex text-white flex-col gap-3">
-                <label className="text-white font-bold  ">Logo URL</label>
+                <label className="text-[#a15102] text-lg font-bold  ">
+                  Logo URL
+                </label>
                 <input
                   type="text"
                   placeholder="Logo URL"
@@ -206,7 +208,9 @@ const Navbar = () => {
               </div>
 
               <div className="flex text-white flex-col gap-3">
-                <label className="text-white font-bold  ">Navbar Links</label>
+                <label className="text-[#a15102] text-lg font-bold  ">
+                  Navbar Links
+                </label>
                 {formData.navlinks.map((link, index) => (
                   <div key={index} className="flex gap-2 mb-2">
                     <input
@@ -244,7 +248,9 @@ const Navbar = () => {
               </div>
 
               <div className="flex text-white flex-col gap-3">
-                <label className="text-white font-bold">Button Name</label>
+                <label className="text-[#a15102] text-lg font-bold">
+                  Button Name
+                </label>
                 <input
                   type="text"
                   placeholder="Button Name"
@@ -257,7 +263,9 @@ const Navbar = () => {
               </div>
 
               <div className="flex  text-white flex-col gap-3">
-                <label className="text-white font-bold">Button URL</label>
+                <label className="text-[#a15102] text-lg font-bold">
+                  Button URL
+                </label>
                 <input
                   type="text"
                   placeholder="Button URL"
@@ -288,7 +296,9 @@ const Navbar = () => {
             className="space-y-4 mt-10 p-5 w-[97%] mx-auto backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]"
           >
             <div className="flex text-white flex-col gap-3">
-              <label className="text-white font-bold">Logo URL</label>
+              <label className="text-[#a15102] text-lg font-bold">
+                Logo URL
+              </label>
               <input
                 type="text"
                 placeholder="Logo URL"
@@ -299,7 +309,9 @@ const Navbar = () => {
             </div>
 
             <div className="flex text-white flex-col gap-3">
-              <label className="text-white font-bold">Navbar Links</label>
+              <label className="text-[#a15102] text-lg font-bold">
+                Navbar Links
+              </label>
               {updateNavbar?.map((link, index) => (
                 <div key={index} className="flex gap-2 mb-2">
                   <input
@@ -339,7 +351,9 @@ const Navbar = () => {
             </div>
 
             <div className="flex text-white flex-col gap-3">
-              <label className="text-white font-bold">Button Name</label>
+              <label className="text-[#a15102] text-lg font-bold">
+                Button Name
+              </label>
               <input
                 type="text"
                 placeholder="Button Name"
@@ -350,7 +364,9 @@ const Navbar = () => {
             </div>
 
             <div className="flex text-white flex-col gap-3">
-              <label className="text-white font-bold">Button URL</label>
+              <label className="text-[#a15102] text-lg font-bold">
+                Button URL
+              </label>
               <input
                 type="text"
                 placeholder="Button URL"
@@ -429,7 +445,7 @@ const Navbar = () => {
           {/* Navigation Links */}
           <div className="mb-8">
             {navlinks?.length === 0 || !navlinks ? (
-              <p className="text-center text-gray-500 py-8">
+              <p className="text-center text-white/70 py-8">
                 No links available.
               </p>
             ) : (
@@ -448,7 +464,7 @@ const Navbar = () => {
                     >
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-2 h-2 bg-amber-500 rounded-full group-hover:animate-pulse"></div>
-                        <span className="text-gray-800 font-semibold">
+                        <span className="text-[#a15102] font-semibold">
                           {link.name}
                         </span>
                       </div>

@@ -82,7 +82,7 @@ const Popular = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading Popular...
           </p>
         </div>
@@ -95,7 +95,7 @@ const Popular = () => {
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+            <h2 className="text-lg font-semibold text-[#a15102] mb-4">
               Are you sure you want to delete?
             </h2>
             <div className="flex justify-around mt-4">
@@ -107,7 +107,7 @@ const Popular = () => {
               </button>
               <button
                 onClick={() => setPopup(false)}
-                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+                className="bg-gray-300 text-[#a15102] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
               >
                 No
               </button>
@@ -118,10 +118,10 @@ const Popular = () => {
       <div className="w-[95%] h-[95%]  rounded-xl p-6">
         {/* Header */}
 
-        <h1 className="text-3xl font-bold text-white mb-2">
+        <h1 className="text-3xl font-bold text-[#a15102] mb-2">
           Popular Section Dashboard
         </h1>
-        <p className="text-white/70 mb-6">
+        <p className="text-[#a15102] text-lg mb-6">
           Manage your popular section content
         </p>
 
@@ -130,7 +130,7 @@ const Popular = () => {
           {popularData ? (
             <>
               <div className="flex justify-between items-start mb-6">
-                <h2 className="text-2xl text-white font-semibold">
+                <h2 className="text-2xl text-[#a15102] font-bold">
                   Current Popular Section
                 </h2>
                 <div className="flex gap-4">
@@ -152,32 +152,32 @@ const Popular = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-white/80">
+                    <label className="block text-lg font-medium text-white">
                       Popular Heading
                     </label>
-                    <p className="text-white bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1">
+                    <p className="text-[#a15102] text-lg bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1">
                       {popularData.title}
                     </p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-white/80">
+                    <label className="block text-lg font-medium text-white">
                       Popular Paragraph
                     </label>
-                    <p className="text-white bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1 leading-relaxed">
+                    <p className="text-[#a15102] text-lg bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1 leading-relaxed">
                       {popularData.description}
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-white/80">
+                  <label className="block text-lg font-medium text-white">
                     Popular Image
                   </label>
                   <div className="mt-1 bg-[#ffffff]/[0.3] p-3 rounded-xl">
                     <img
                       src={popularData.topimg}
                       alt={popularData.topimg}
-                      className="w-full max-w-xs px-10 py-10 text-white rounded-xl border border-[#ffffff]/[0.2]"
+                      className="w-full max-w-xs px-10 py-10 text-[#a15102] rounded-xl border border-[#ffffff]/[0.2]"
                     />
                   </div>
                 </div>
@@ -200,7 +200,7 @@ const Popular = () => {
           <form onSubmit={submitHandler} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-lg font-medium text-white mb-2">
                   Popular Heading
                 </label>
                 <input
@@ -214,7 +214,7 @@ const Popular = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-white/80 mb-2">
+                <label className="block text-lg font-medium text-white mb-2">
                   Popular Image URL
                 </label>
                 <input
@@ -230,7 +230,7 @@ const Popular = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white/80 mb-2">
+              <label className="block text-lg font-medium text-white mb-2">
                 Popular Paragraph
               </label>
               <textarea

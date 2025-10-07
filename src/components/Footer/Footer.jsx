@@ -184,7 +184,7 @@ const Footer = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading Footer...
           </p>
         </div>
@@ -197,7 +197,7 @@ const Footer = () => {
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+            <h2 className="text-lg font-semibold text-[#a15102]  mb-4">
               Are you sure you want to delete?
             </h2>
             <div className="flex justify-around mt-4">
@@ -209,7 +209,7 @@ const Footer = () => {
               </button>
               <button
                 onClick={() => setPopup(false)}
-                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+                className="bg-gray-300 text-[#a15102]  px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
               >
                 No
               </button>
@@ -219,7 +219,7 @@ const Footer = () => {
       )}
       <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-white">
+        <h1 className="text-3xl py-7 px-5 font-bold text-[#a15102] ">
           Footer Dashboard
         </h1>
 
@@ -228,7 +228,7 @@ const Footer = () => {
           {footerData ? (
             <>
               <div className="flex justify-between items-center">
-                <h2 className="text-2xl text-white font-semibold">
+                <h2 className="text-2xl text-[#a15102]  font-semibold">
                   Current Footer
                 </h2>
                 <div className="flex gap-5">
@@ -260,14 +260,14 @@ const Footer = () => {
                     {/* Logo - Left Side */}
                     <div className="lg:w-1/3 flex flex-col items-center justify-center">
                       <div className="w-full p-6 rounded-xl bg-gradient-to-br from-white/80 to-amber-50/60 border border-amber-300/40 shadow-inner">
-                        <h3 className="font-semibold text-[#242220] mb-4 text-center text-lg">
+                        <h3 className="font-semibold text-[#a15102]  mb-4 text-center text-lg">
                           Brand Logo
                         </h3>
                         <div className="flex justify-center items-center bg-white/40 rounded-lg p-4">
                           <img
                             src={footerData?.logo || ""}
                             alt={footerData?.logo || ""}
-                            className="max-w-full h-28 text-gray-700 object-contain drop-shadow-md"
+                            className="max-w-full h-28 text-[#a15102]  object-contain drop-shadow-md"
                           />
                         </div>
                       </div>
@@ -277,8 +277,8 @@ const Footer = () => {
                     <div className="lg:w-2/3 flex flex-col gap-5">
                       {/* Description */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        <h3 className="font-semibold text-[#a15102]  mb-3 text-lg flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 text-[#a15102]  rounded-full bg-amber-500"></span>
                           Description
                         </h3>
                         <p className="text-gray-700 leading-relaxed">
@@ -288,8 +288,8 @@ const Footer = () => {
 
                       {/* Copyright */}
                       <div className="p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                        <h3 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                        <h3 className="font-semibold text-[#a15102]  mb-3 text-lg flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 text-[#a15102]  rounded-full bg-amber-500"></span>
                           Copyright
                         </h3>
                         <p className="text-gray-700">
@@ -302,7 +302,7 @@ const Footer = () => {
 
                 {/* Address & Map Section */}
                 <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
-                  <h3 className="font-bold text-white mb-6 text-2xl flex items-center gap-3">
+                  <h3 className="font-bold text-[#a15102]  mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Location Information
                   </h3>
@@ -310,7 +310,7 @@ const Footer = () => {
                   <div className="flex flex-col lg:flex-row gap-6">
                     {/* Address */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-[#a15102] mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Address
                       </h4>
@@ -321,7 +321,7 @@ const Footer = () => {
 
                     {/* Map Embed */}
                     <div className="lg:w-1/2 p-6 rounded-xl bg-gradient-to-br from-white/70 to-amber-50/50 border border-amber-200/50 shadow-sm">
-                      <h4 className="font-semibold text-[#242220] mb-3 text-lg flex items-center gap-2">
+                      <h4 className="font-semibold text-[#a15102] mb-3 text-lg flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         Map Location
                       </h4>
@@ -366,14 +366,14 @@ const Footer = () => {
                               <img
                                 src={social.icon}
                                 alt={social.plateform}
-                                className="w-8 h-8 object-contain"
+                                className="w-8 h-8 object-contain text-[#a15102]"
                               />
                             </div>
                           )}
 
                           {/* Platform Name */}
                           <div className="flex-shrink-0 min-w-[120px]">
-                            <p className="font-semibold text-gray-800 text-base">
+                            <p className="font-semibold text-[#a15102] text-base">
                               {social.plateform || "N/A"}
                             </p>
                           </div>
@@ -410,7 +410,7 @@ const Footer = () => {
                         <div className="flex items-center gap-6">
                           {/* Link Name */}
                           <div className="flex-shrink-0 min-w-[150px]">
-                            <p className="font-semibold text-gray-800 text-base">
+                            <p className="font-semibold text-[#a15102] text-base">
                               {nav.names || "N/A"}
                             </p>
                           </div>
@@ -445,7 +445,7 @@ const Footer = () => {
                         <div className="flex items-center gap-6">
                           {/* Link Name */}
                           <div className="flex-shrink-0 min-w-[150px]">
-                            <p className="font-semibold text-gray-800 text-base">
+                            <p className="font-semibold text-[#a15102] text-base">
                               {quick.name || "N/A"}
                             </p>
                           </div>

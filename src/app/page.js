@@ -64,10 +64,10 @@ const Dashboard = () => {
     <div className="backdrop-blur-xl bg-white/30 border border-white/20 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.1)] p-6 hover:shadow-[0_8px_40px_rgba(183,88,38,0.15)] hover:scale-105 transition-all duration-300">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm font-medium text-gray-700 uppercase tracking-wide">
+          <p className="text-sm font-medium text-[#a15102] uppercase tracking-wide">
             {title}
           </p>
-          <p className="text-3xl font-bold text-[#242220] mt-2">{count}</p>
+          <p className="text-3xl font-bold text-[#a15102] mt-2">{count}</p>
         </div>
         <div
           className={`p-4 rounded-xl backdrop-blur-md ${
@@ -82,7 +82,7 @@ const Dashboard = () => {
           className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
             status === "active"
               ? "bg-gradient-to-r from-[#B75826]/20 to-amber-100/30 text-[#B75826] border border-[#B75826]/20"
-              : "bg-gray-200/40 text-gray-600 border border-gray-300/30"
+              : "bg-gray-200/40 text-[#a15102] border border-gray-300/30"
           }`}
         >
           {status === "active" ? "✓ Active" : "✗ No Data"}
@@ -94,7 +94,7 @@ const Dashboard = () => {
   // ✅ Improved DataSection with array/object handling
   const DataSection = ({ title, data, fields }) => (
     <div className="backdrop-blur-xl bg-white/35 border border-white/20 rounded-2xl shadow-[0_7px_30px_rgba(0,0,0,0.15)] p-8 mb-6">
-      <h3 className="text-2xl font-bold text-[#242220] mb-6 flex items-center gap-3 uppercase tracking-wide">
+      <h3 className="text-2xl font-bold text-[#a15102] mb-6 flex items-center gap-3 uppercase tracking-wide">
         {title}
         {data && (
           <span className="text-xs bg-gradient-to-r from-[#B75826]/20 to-amber-100/30 text-[#B75826] px-3 py-1.5 rounded-full border border-[#B75826]/20">
@@ -113,11 +113,11 @@ const Dashboard = () => {
                 key={field.key}
                 className="backdrop-blur-md bg-gradient-to-r from-white/50 to-amber-50/30 rounded-xl p-5 border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300"
               >
-                <p className="text-sm font-bold text-gray-800 uppercase tracking-wide mb-2">
+                <p className="text-sm font-bold text-[#a15102] uppercase tracking-wide mb-2">
                   {field.label}
                 </p>
 
-                <div className="text-gray-700 break-words space-y-2">
+                <div className="text-[#a15102] break-words space-y-2">
                   {Array.isArray(value) ? (
                     value.length > 0 ? (
                       <ul className="list-disc list-inside space-y-1">
@@ -127,7 +127,7 @@ const Dashboard = () => {
                             className="bg-white/40 rounded-md p-2 border border-gray-200/40"
                           >
                             {typeof item === "object" ? (
-                              <div className="text-sm text-gray-800">
+                              <div className="text-sm text-[#a15102]">
                                 {Object.entries(item).map(([k, v]) => (
                                   <p key={k}>
                                     <strong>{k}:</strong> {String(v)}
@@ -141,7 +141,7 @@ const Dashboard = () => {
                         ))}
                       </ul>
                     ) : (
-                      <span className="italic text-gray-500">Empty array</span>
+                      <span className="italic text-[#a15102]">Empty array</span>
                     )
                   ) : typeof value === "object" && value !== null ? (
                     <pre className="text-sm bg-white/30 p-3 rounded-md border border-gray-200/40 overflow-x-auto">
@@ -157,7 +157,7 @@ const Dashboard = () => {
         </div>
       ) : (
         <div className="text-center py-12 backdrop-blur-md bg-white/20 rounded-xl border border-white/30">
-          <p className="text-gray-600 text-lg">
+          <p className="text-[#a15102] text-lg">
             No data available for this section
           </p>
         </div>
@@ -167,7 +167,7 @@ const Dashboard = () => {
 
   const OverviewSection = () => (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
         <DataCard
           title="Navbar"
           status={data.navbar ? "active" : "inactive"}
@@ -222,7 +222,7 @@ const Dashboard = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading dashboard...
           </p>
         </div>
@@ -236,7 +236,7 @@ const Dashboard = () => {
       <header className="backdrop-blur-xl bg-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.08)] border-b border-white/30 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-[#242220] uppercase tracking-wide">
+            <h1 className="text-3xl font-bold text-[#a15102] uppercase tracking-wide">
               Admin Dashboard
             </h1>
             <button
@@ -254,7 +254,7 @@ const Dashboard = () => {
           {/* Sidebar */}
           <aside className="lg:w-72 flex-shrink-0">
             <nav className="backdrop-blur-xl bg-white/35 border border-white/20 rounded-2xl shadow-[0_7px_30px_rgba(0,0,0,0.1)] p-6 sticky top-28">
-              <h2 className="text-xs font-bold text-gray-600 uppercase tracking-widest mb-4 px-3">
+              <h2 className="text-xs font-bold text-[#a15102] uppercase tracking-widest mb-4 px-3">
                 Sections
               </h2>
               <div className="space-y-2">
@@ -265,7 +265,7 @@ const Dashboard = () => {
                     className={`w-full flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 font-medium ${
                       activeSection === section.id
                         ? "bg-gradient-to-r from-[#B75826] to-amber-600 text-white shadow-[0_6px_25px_rgba(183,88,38,0.3)] scale-105"
-                        : "text-gray-700 hover:bg-white/60 hover:shadow-[0_4px_15px_rgba(0,0,0,0.08)] backdrop-blur-md"
+                        : "text-[#a15102] hover:bg-white/60 hover:shadow-[0_4px_15px_rgba(0,0,0,0.08)] backdrop-blur-md"
                     }`}
                   >
                     <span className="uppercase tracking-wide text-sm">

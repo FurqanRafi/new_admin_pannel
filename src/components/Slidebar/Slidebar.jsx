@@ -6,6 +6,11 @@ import { TbChartBarPopular, TbCards } from "react-icons/tb";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { AuthContext } from "@/AppContext/AppContext";
+import { RiMenu2Line } from "react-icons/ri";
+import { PiDiamondsFourBold } from "react-icons/pi";
+import { TfiLayoutMediaLeftAlt } from "react-icons/tfi";
+import { IoHomeSharp } from "react-icons/io5";
+
 
 const Slidebar = () => {
   const [popup, setPopup] = useState(false);
@@ -26,13 +31,13 @@ const Slidebar = () => {
   return (
     <div className="w-full h-screen flex justify-center">
       <div className="w-full h-screen backdrop-blur-xl bg-[#ffffff]/[0.25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-br-xl p-6 flex flex-col justify-between">
-        <div className="flex items-center gap-4 pb-6 border-b border-[#F5EFEB]/[0.2]">
+        <div className="flex items-center flex-col gap-4 pb-6 border-b border-[#F5EFEB]/[0.3]">
           <img
             src="/Avatar.png"
             alt="Admin Avatar"
-            className="w-12 h-12 rounded-full border border-[#F5EFEB]/[0.3]"
+            className="w-19 h-19 rounded-full border border-[#F5EFEB]/[0.3]"
           />
-          <h1 className="text-2xl font-bold text-[#242220]">Admin Panel</h1>
+          <h1 className="text-2xl font-bold text-[#a15102]">Admin Panel</h1>
         </div>
 
         <ul className="flex flex-col gap-4 mt-6 flex-1">
@@ -40,9 +45,9 @@ const Slidebar = () => {
             <Link
               href="/"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <img className="w-5 h-5" src="/dashboard.svg" alt="Dashboard" />
+              <IoHomeSharp className="w-5 h-5 text-[#a15102]" />
               Dashboard
             </Link>
           </li>
@@ -51,9 +56,9 @@ const Slidebar = () => {
             <Link
               href="/navbar"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <img className="w-5 h-5" src="/menu.svg" alt="Navbar" />
+              <RiMenu2Line className="w-5 h-5 text-[#a15102]" />
               Navbar
             </Link>
           </li>
@@ -62,9 +67,9 @@ const Slidebar = () => {
             <Link
               href="/hero"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <SiApacherocketmq className="w-5 h-5" />
+              <SiApacherocketmq className="w-5 h-5 text-[#a15102]" />
               Hero
             </Link>
           </li>
@@ -73,9 +78,9 @@ const Slidebar = () => {
             <Link
               href="/about"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <img className="w-5 h-5" src="/about.svg" alt="About" />
+              <PiDiamondsFourBold className="w-5 h-5 text-[#a15102]" />
               About Us
             </Link>
           </li>
@@ -84,9 +89,9 @@ const Slidebar = () => {
             <Link
               href="/popular"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <TbChartBarPopular className="w-5 h-5" />
+              <TbChartBarPopular className="w-5 h-5 text-[#a15102]" />
               Popular
             </Link>
           </li>
@@ -95,9 +100,9 @@ const Slidebar = () => {
             <Link
               href="/cards"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <TbCards className="w-5 h-5" />
+              <TbCards className="w-5 h-5 text-[#a15102]" />
               Cards
             </Link>
           </li>
@@ -106,9 +111,9 @@ const Slidebar = () => {
             <Link
               href="/footer"
               className="px-4 py-2 rounded-xl bg-[#242220]/[0.01] border backdrop-blur-3xl 
-              border-[#F5EFEB]/[0.10] text-[#242220] font-semibold text-lg flex items-center gap-2"
+              border-[#F5EFEB]/[0.10] text-[#a15102] font-semibold text-lg flex items-center gap-2"
             >
-              <img className="w-5 h-5" src="/footer.svg" alt="Footer" />
+              <TfiLayoutMediaLeftAlt className="w-5 h-5 text-[#a15102]" />
               Footer
             </Link>
           </li>
@@ -120,7 +125,11 @@ const Slidebar = () => {
             className="bg-[#B75826] px-10 py-4 flex items-center justify-center rounded-full 
             text-[#ffffff] gap-2 text-lg font-semibold cursor-pointer"
           >
-            <img className="w-5 h-5" src="/logout.svg" alt="Logout" />
+            <img
+              className="w-5 h-5 text-[#ffffff]"
+              src="/logout.svg"
+              alt="Logout"
+            />
             Logout
           </button>
         </div>

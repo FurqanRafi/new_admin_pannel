@@ -94,7 +94,7 @@ const Hero = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading Hero...
           </p>
         </div>
@@ -107,7 +107,7 @@ const Hero = () => {
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+            <h2 className="text-lg font-semibold text-[#a15102] mb-4">
               Are you sure you want to delete?
             </h2>
             <div className="flex justify-around mt-4">
@@ -119,7 +119,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={() => setPop(false)}
-                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+                className="bg-gray-300 text-[#a15102] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
               >
                 No
               </button>
@@ -129,7 +129,7 @@ const Hero = () => {
       )}
       <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-white">
+        <h1 className="text-3xl py-7 px-5 font-bold text-[#a15102]">
           Hero Section Dashboard
         </h1>
 
@@ -140,7 +140,7 @@ const Hero = () => {
               <>
                 {/* Header with Update/Delete buttons */}
                 <div className="flex justify-between items-center">
-                  <h2 className="text-2xl text-white font-semibold">
+                  <h2 className="text-2xl text-[#a15102] font-bold">
                     Current Hero Section
                   </h2>
                   <div className="flex gap-5">
@@ -168,7 +168,7 @@ const Hero = () => {
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Title
                       </div>
-                      <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                      <div className="p-5 text-[#a15102] text-lg bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                         {heroData.title}
                       </div>
                     </div>
@@ -177,7 +177,7 @@ const Hero = () => {
                         Heading
                       </div>
 
-                      <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                      <div className="p-5 text-[#a15102] text-lg bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                         {heroData.heading}
                       </div>
                     </div>
@@ -185,7 +185,7 @@ const Hero = () => {
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Description
                       </div>
-                      <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                      <div className="p-5 text-[#a15102] text-lg bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                         {heroData.description}
                       </div>
                     </div>
@@ -201,10 +201,10 @@ const Hero = () => {
                       </div>
 
                       <div className="grid grid-cols-2 gap-6 text-white">
-                        <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                        <div className="p-5 text-[#a15102] text-lg bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                           {heroData.btntext}
                         </div>
-                        <div className="p-5 text-gray-700 bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
+                        <div className="p-5 text-[#a15102] text-lg bg-gradient-to-r from-white/50 to-amber-50/30 backdrop-blur-md rounded-xl border border-amber-200/40 hover:border-amber-300/60 hover:shadow-[0_8px_30px_rgba(218,165,32,0.2)] hover:scale-105 transition-all duration-300">
                           {heroData.btnlink}
                         </div>
                       </div>
@@ -243,7 +243,7 @@ const Hero = () => {
             ) : (
               <>
                 {/* No Data UI */}
-                <h1 className="text-5xl text-white font-semibold">
+                <h1 className="text-5xl text-[#a15102] font-semibold">
                   No Hero Section
                 </h1>
               </>
@@ -252,14 +252,16 @@ const Hero = () => {
 
           {/* Create Hero Section */}
           <div className="w-full h-[80%] mt-7  ">
-            <h1 className="text-white text-2xl font-semibold">
+            <h1 className="text-[#a15102] text-2xl font-semibold">
               Create Hero Section
             </h1>
-            <div className="w-full h-[80%] px-10 rounded-2xl bg-transparent border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
+            <div className="w-full h-[80%] px-10 rounded-2xl bg-[#ffffff]/[0.1] border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
               <form onSubmit={submitHandler} className="space-y-4">
                 <div className="grid grid-cols-1 gap-5 py-10">
                   <div className="flex text-white flex-col gap-3">
-                    <label>Title</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Title
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter title"
@@ -271,7 +273,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Heading</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Heading
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter main heading"
@@ -283,7 +287,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Description</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Description
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter sub heading"
@@ -298,7 +304,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Button Text</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Button Text
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter button text"
@@ -310,7 +318,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Button Link</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Button Link
+                    </label>
                     <input
                       type="text"
                       placeholder="Enter button link"
@@ -322,7 +332,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Hero Image URL</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Hero Image URL
+                    </label>
                     <input
                       type="text"
                       placeholder="https://example.com/hero.jpg"
@@ -334,7 +346,9 @@ const Hero = () => {
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
-                    <label>Side Image URL</label>
+                    <label className="text-xl text-[#a15102] font-bold uppercase">
+                      Side Image URL
+                    </label>
                     <input
                       type="text"
                       placeholder="https://example.com/side.jpg"

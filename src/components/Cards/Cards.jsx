@@ -88,7 +88,7 @@ const Cards = () => {
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
         <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
           <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
-          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+          <p className="mt-6 text-[#a15102] font-bold text-lg uppercase tracking-wide">
             Loading Cards...
           </p>
         </div>
@@ -101,7 +101,7 @@ const Cards = () => {
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+            <h2 className="text-lg font-semibold text-[#a15102] mb-4">
               Are you sure you want to delete?
             </h2>
             <div className="flex justify-around mt-4">
@@ -113,7 +113,7 @@ const Cards = () => {
               </button>
               <button
                 onClick={() => setPopup(false)}
-                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+                className="bg-gray-300 text-[#a15102] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
               >
                 No
               </button>
@@ -123,13 +123,13 @@ const Cards = () => {
       )}
       <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-white">
+        <h1 className="text-3xl py-7 px-5 font-bold text-[#a15102]">
           Cards Section Dashboard
         </h1>
 
         <div className="px-5 pb-7">
           {/* Current Section */}
-          <div className="w-full h-[80%] rounded-2xl bg-transparent border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] flex flex-col gap-10 p-10 mt-5">
+          <div className="w-full h-[80%] rounded-2xl  flex flex-col gap-5  ">
             {cardsData ? (
               <>
                 <div className="flex justify-between items-center">
@@ -163,7 +163,7 @@ const Cards = () => {
                       <img
                         src={cardsData.Cardimg1 ?? ""}
                         alt={cardsData.Cardimg1}
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full h-48 object-cover text-[#773e04] rounded-lg"
                       />
                     </div>
 
@@ -171,7 +171,7 @@ const Cards = () => {
                       <img
                         src={cardsData.Cardimg2 ?? ""}
                         alt={cardsData.Cardimg2}
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full h-48 object-cover text-[#773e04]  rounded-lg"
                       />
                     </div>
 
@@ -179,7 +179,7 @@ const Cards = () => {
                       <img
                         src={cardsData.Cardimg3 ?? ""}
                         alt={cardsData.Cardimg3}
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full h-48 object-cover text-[#773e04]  rounded-lg"
                       />
                     </div>
 
@@ -187,7 +187,7 @@ const Cards = () => {
                       <img
                         src={cardsData.Cardimg4 ?? ""}
                         alt={cardsData.Cardimg4}
-                        className="w-full h-48 object-cover rounded-lg"
+                        className="w-full h-48 object-cover text-[#773e04]  rounded-lg"
                       />
                     </div>
                   </div>
@@ -207,7 +207,7 @@ const Cards = () => {
 
           {/* Create Form */}
           <div className="w-full mt-7">
-            <h1 className="text-white text-2xl font-semibold">
+            <h1 className="text-white   text-2xl font-semibold">
               Create Cards Section
             </h1>
             <div className="w-full px-10 py-8 mt-7 rounded-2xl border border-[#ffffff]/[0.1] shadow-[0_7px_30px_rgba(0,0,0,0.3)]">

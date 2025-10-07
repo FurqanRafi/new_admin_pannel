@@ -20,8 +20,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body style={{background: "#B75826"}}
-        className={`${geistSans.variable} ${geistMono.variable} flex antialiased`}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} flex antialiased bg-[url('/picture.png')]`}
       >
         <ClientWrapper>{children}</ClientWrapper>
       </body>

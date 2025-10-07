@@ -145,7 +145,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 gap-10 ">
-      <div className="w-[95%] h-[95%] backdrop-blur-xl bg-[#FFEDE0]/[34] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
+      <div className="w-[95%] h-[95%] backdrop-blur-xl bg-[#FFEDE0]/[23] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
           Navbar Dashboard
         </h1>

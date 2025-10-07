@@ -266,7 +266,7 @@ const Navbar = () => {
       </div>
 
       {/* Update Form */}
-      <div className="w-[95%] h-[95%] backdrop-blur-xl bg-[#FFEDE0]/[34] border border-[#F5EFEB]/[0.20] shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl overflow-hidden">
+      <div className="w-[95%] h-[95%] backdrop-blur-xl border border-[#F5EFEB]/[0.20] shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl overflow-hidden">
         {update && (
           <form
             onSubmit={(e) => e.preventDefault()}

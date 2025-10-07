@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { AuthContext } from "@/AppContext/AppContext";
 import Login from "@/components/Authentications/Login";
 import Slidebar from "@/components/Slidebar/Slidebar";

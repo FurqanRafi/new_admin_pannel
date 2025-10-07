@@ -355,7 +355,7 @@ const Navbar = () => {
           </form>
         )}
 
-        <div className="px-10 py-10">
+        <div className="px-10 py-10 border border-[#F5EFEB]/[0.20] shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
           {/* Logo Section */}
           <div className="mb-8 flex justify-between items-start">
             <div className="flex-1">

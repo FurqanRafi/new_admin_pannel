@@ -145,7 +145,7 @@ const Hero = () => {
 
                 {/* Display Hero Data */}
 
-                <div className="flex flex-col md:flex-row gap-10 items-center backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
+                <div className="flex flex-col md:flex-row gap-10 items-center ">
                   {/* Left - Text Content */}
                   <div className="flex-1 flex flex-col gap-6">
                     <div className="mt-8">

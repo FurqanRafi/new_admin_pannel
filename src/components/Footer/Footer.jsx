@@ -179,7 +179,7 @@ const Footer = () => {
         </div>
       )}
 
-      <div className="w-[95%] max-w-6xl p-8 rounded-3xl backdrop-blur-xl bg-white/10 border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+      <div className="w-[95%] max-w-6xl p-8 rounded-3xl backdrop-blur-xl  border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600">
             Footer Dashboard
@@ -207,7 +207,7 @@ const Footer = () => {
         {footerData ? (
           <div className="space-y-8">
             {/* Logo + Description */}
-            <div className="p-8 rounded-2xl bg-white/20 border border-white/10 backdrop-blur-lg shadow-inner">
+            <div className="p-8 rounded-2xl  border border-white/10 backdrop-blur-lg shadow-inner">
               <h2 className="text-2xl font-bold text-amber-700 mb-4">
                 Brand Details
               </h2>
@@ -228,13 +228,13 @@ const Footer = () => {
 
             {/* Address + Map */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 rounded-2xl bg-white/20 border border-white/10 backdrop-blur-lg shadow-inner">
+              <div className="p-6 rounded-2xl  border border-white/10 backdrop-blur-lg shadow-inner">
                 <h3 className="text-xl font-semibold text-amber-700 mb-2">
                   Address
                 </h3>
                 <p className="text-gray-800">{footerData.address}</p>
               </div>
-              <div className="p-6 rounded-2xl bg-white/20 border border-white/10 backdrop-blur-lg shadow-inner">
+              <div className="p-6 rounded-2xl  border border-white/10 backdrop-blur-lg shadow-inner">
                 <h3 className="text-xl font-semibold text-amber-700 mb-2">
                   Map Location
                 </h3>
@@ -252,7 +252,7 @@ const Footer = () => {
             </div>
 
             {/* Social Links */}
-            <div className="p-8 rounded-2xl bg-white/20 border border-white/10 backdrop-blur-lg shadow-inner">
+            <div className="p-8 rounded-2xl  border border-white/10 backdrop-blur-lg shadow-inner">
               <h2 className="text-2xl font-bold text-amber-700 mb-4">
                 Social Media Links
               </h2>

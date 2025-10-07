@@ -28,7 +28,7 @@ const Slidebar = () => {
       <div className="w-full h-screen backdrop-blur-xl bg-[#ffffff]/[0.25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-br-xl p-6 flex flex-col justify-between">
         <div className="flex items-center gap-4 pb-6 border-b border-[#F5EFEB]/[0.2]">
           <img
-            src="/avatar.png"
+            src="/Avatar.png"
             alt="Admin Avatar"
             className="w-12 h-12 rounded-full border border-[#F5EFEB]/[0.3]"
           />

@@ -176,7 +176,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-start py-10 justify-center">
+    <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
       {popup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
           <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
@@ -200,7 +200,7 @@ const Footer = () => {
           </div>
         </div>
       )}
-      <div className="w-[95%] h-auto backdrop-blur-xl bg-[#ffffff]/[35] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
+      <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
         <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
           Footer Dashboard
@@ -232,13 +232,13 @@ const Footer = () => {
 
               {/* Display Footer */}
 
-              <div className="w-full rounded-3xl backdrop-blur-xl bg-[#ffffff]/[35] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] p-8 mt-5">
+              <div className="w-full rounded-3xl backdrop-blur-xl border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] p-8 mt-5">
                 <h2 className="text-3xl text-[#242220] font-bold mb-8 bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text">
                   Footer Configuration
                 </h2>
 
                 {/* Logo, Description & Copyright Section */}
-                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
                   <div className="flex flex-col lg:flex-row gap-8 items-start">
                     {/* Logo - Left Side */}
                     <div className="lg:w-1/3 flex flex-col items-center justify-center">
@@ -284,7 +284,7 @@ const Footer = () => {
                 </div>
 
                 {/* Address & Map Section */}
-                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
                   <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Location Information
@@ -331,7 +331,7 @@ const Footer = () => {
                 </div>
 
                 {/* Social Links Section */}
-                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
                   <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Social Media Links
@@ -379,7 +379,7 @@ const Footer = () => {
                 </div>
 
                 {/* Navigation Links Section */}
-                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                <div className="mb-8 p-8 rounded-2xl backdrop-blur-xl    border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
                   <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Navigation Links
@@ -414,7 +414,7 @@ const Footer = () => {
                 </div>
 
                 {/* Quick Links Section */}
-                <div className="p-8 rounded-2xl backdrop-blur-xl bg-[#ffffff]/[25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
+                <div className="p-8 rounded-2xl backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] transition-all duration-300">
                   <h3 className="font-bold text-amber-800 mb-6 text-2xl flex items-center gap-3">
                     <span className="w-2 h-2 rounded-full bg-gradient-to-r from-amber-500 to-orange-500"></span>
                     Quick Links

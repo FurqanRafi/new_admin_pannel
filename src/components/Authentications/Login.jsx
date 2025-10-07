@@ -20,7 +20,7 @@ const Login = () => {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-zinc-900/40 ">
       <div className="w-[40%] h-[60%] p-5 flex flex-col items-center-safe justify-center-safe gap-10 rounded-2xl backdrop-blur-xl bg-[#FFEDE0]/[0.4] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] ">
-        <div className="text-3xl">Login</div>
+        <div className="text-3xl text-white">Login</div>
         <form className="flex flex-col gap-10" onSubmit={handleSubmit}>
           <input
             className="px-3 py-2 border-1 border-[#F5EFEB]/[0.30] text-white rounded-lg"
@@ -39,7 +39,7 @@ const Login = () => {
             required
           />
           <button
-            className="px-3 py-2 rounded-lg text-whit bg-[#B75826] text-xl font-semibold"
+            className="px-3 py-2 rounded-lg text-white bg-[#B75826] text-xl font-semibold"
             type="submit"
           >
             Login

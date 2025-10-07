@@ -76,31 +76,31 @@ const Cards = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-start py-10 justify-center">
-        {popup && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
-            <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
-              <h2 className="text-lg font-semibold text-[#242220] mb-4">
-                Are you sure you want to delete?
-              </h2>
-              <div className="flex justify-around mt-4">
-                <button
-                  onClick={handleDelete}
-                  className="bg-[#B75826] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#9c4519]"
-                >
-                  Yes
-                </button>
-                <button
-                  onClick={() => setPopup(false)}
-                  className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
-                >
-                  No
-                </button>
-              </div>
+    <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)">
+      {popup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/ backdrop-blur-lg z-50">
+          <div className="bg-white rounded-xl shadow-lg p-8 w-100 text-center">
+            <h2 className="text-lg font-semibold text-[#242220] mb-4">
+              Are you sure you want to delete?
+            </h2>
+            <div className="flex justify-around mt-4">
+              <button
+                onClick={handleDelete}
+                className="bg-[#B75826] text-white px-4 py-2 rounded-lg font-medium hover:bg-[#9c4519]"
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => setPopup(false)}
+                className="bg-gray-300 text-[#242220] px-4 py-2 rounded-lg font-medium hover:bg-gray-400"
+              >
+                No
+              </button>
             </div>
           </div>
-        )}
-      <div className="w-[95%] h-auto backdrop-blur-xl bg-[#ffffff]/[0.25] border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
+        </div>
+      )}
+      <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
         <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
           Cards Section Dashboard

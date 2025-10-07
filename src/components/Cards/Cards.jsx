@@ -18,16 +18,24 @@ const Cards = () => {
   const [cardsId, setCardsId] = useState(null);
   const [popup, setPopup] = useState(false);
   const [updateCards, setUpdateCards] = useState(false);
+  const [loading, setloading] = useState(false);
 
   const loadData = async () => {
-    const res = await getCards();
-    console.log(res, "get Cards");
-    if (res) {
-      setCardsData(res);
-      setCardsId(res._id);
-    } else {
-      setCardsData(null);
-      setCardsId(null);
+    try {
+      setloading(true);
+      const res = await getCards();
+      console.log(res, "get Cards");
+      if (res) {
+        setCardsData(res);
+        setCardsId(res._id);
+      } else {
+        setCardsData(null);
+        setCardsId(null);
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setloading(false);
     }
   };
 
@@ -75,6 +83,19 @@ const Cards = () => {
     setPopup(false);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading Cards...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)">
       {popup && (
@@ -102,7 +123,7 @@ const Cards = () => {
       )}
       <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
+        <h1 className="text-3xl py-7 px-5 font-bold text-white">
           Cards Section Dashboard
         </h1>
 
@@ -112,7 +133,7 @@ const Cards = () => {
             {cardsData ? (
               <>
                 <div className="flex justify-between items-center">
-                  <h2 className="text-2xl text-[#242220] font-semibold">
+                  <h2 className="text-2xl text-white font-semibold">
                     Current Cards Section
                   </h2>
                   <div className="flex gap-5">
@@ -126,7 +147,7 @@ const Cards = () => {
                 </div>
                 {/* Display the Cards Data */}
                 <div className="w-full rounded-2xl bg-transparent border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] p-10 mt-5">
-                  <h2 className="text-2xl text-[#242220] font-semibold mb-6">
+                  <h2 className="text-2xl text-white font-semibold mb-6">
                     Cards Section
                   </h2>
 
@@ -169,7 +190,7 @@ const Cards = () => {
               <>
                 {/* Empty State */}
                 <div className="w-full rounded-2xl border border-[#ffffff]/[0.1] shadow-[0_7px_30px_rgba(0,0,0,0.3)] flex flex-col items-center gap-10 p-20 mt-5">
-                  <h1 className="text-5xl text-[#242220] font-semibold">
+                  <h1 className="text-5xl text-white font-semibold">
                     No Cards Section
                   </h1>
                 </div>
@@ -179,14 +200,14 @@ const Cards = () => {
 
           {/* Create Form */}
           <div className="w-full mt-7">
-            <h1 className="text-[#242220] text-2xl font-semibold">
+            <h1 className="text-white text-2xl font-semibold">
               Create Cards Section
             </h1>
             <div className="w-full px-10 py-8 mt-7 rounded-2xl border border-[#ffffff]/[0.1] shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
               <form onSubmit={submitHandler} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-3">
-                    <label>Card Image 1 URL</label>
+                    <label className="text-white">Card Image 1 URL</label>
                     <input
                       type="text"
                       placeholder="https://example.com/card1.jpg"
@@ -198,7 +219,7 @@ const Cards = () => {
                     />
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label>Card Image 2 URL</label>
+                    <label className="text-white">Card Image 2 URL</label>
                     <input
                       type="text"
                       placeholder="https://example.com/card2.jpg"
@@ -210,7 +231,7 @@ const Cards = () => {
                     />
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label>Card Image 3 URL</label>
+                    <label className="text-white">Card Image 3 URL</label>
                     <input
                       type="text"
                       placeholder="https://example.com/card3.jpg"
@@ -222,7 +243,7 @@ const Cards = () => {
                     />
                   </div>
                   <div className="flex flex-col gap-3">
-                    <label>Card Image 4 URL</label>
+                    <label className="text-white">Card Image 4 URL</label>
                     <input
                       type="text"
                       placeholder="https://example.com/card4.jpg"

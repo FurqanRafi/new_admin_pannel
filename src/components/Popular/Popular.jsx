@@ -16,8 +16,10 @@ const Popular = () => {
   const [popularId, setPopularId] = useState(null);
   const [popup, setPopup] = useState(false);
   const [updatePopular, setUpdatePopular] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loadData = async () => {
+    setLoading(true);
     const res = await getPopular();
     console.log(res, "get popular");
     if (res) {
@@ -28,6 +30,7 @@ const Popular = () => {
       setPopularData(false);
       setPopularId(null);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -63,6 +66,19 @@ const Popular = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading Popular...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex items-start py-10 justify-center  backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
       {popup && (
@@ -91,10 +107,10 @@ const Popular = () => {
       <div className="w-[95%] h-[95%]  rounded-xl p-6">
         {/* Header */}
 
-        <h1 className="text-3xl font-bold text-[#242220] mb-2">
+        <h1 className="text-3xl font-bold text-white mb-2">
           Popular Section Dashboard
         </h1>
-        <p className="text-[#242220]/70 mb-6">
+        <p className="text-white/70 mb-6">
           Manage your popular section content
         </p>
 
@@ -103,7 +119,7 @@ const Popular = () => {
           {popularData ? (
             <>
               <div className="flex justify-between items-start mb-6">
-                <h2 className="text-2xl text-[#242220] font-semibold">
+                <h2 className="text-2xl text-white font-semibold">
                   Current Popular Section
                 </h2>
                 <div className="flex gap-4">
@@ -119,7 +135,7 @@ const Popular = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-[#242220]/80">
+                    <label className="block text-sm font-medium text-white/80">
                       Popular Heading
                     </label>
                     <p className="text-[#242220] bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1">
@@ -127,7 +143,7 @@ const Popular = () => {
                     </p>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-[#242220]/80">
+                    <label className="block text-sm font-medium text-white/80">
                       Popular Paragraph
                     </label>
                     <p className="text-[#242220] bg-[#ffffff]/[0.3] p-3 rounded-xl mt-1 leading-relaxed">
@@ -137,7 +153,7 @@ const Popular = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#242220]/80">
+                  <label className="block text-sm font-medium text-white/80">
                     Popular Image
                   </label>
                   <div className="mt-1 bg-[#ffffff]/[0.3] p-3 rounded-xl">
@@ -152,7 +168,7 @@ const Popular = () => {
             </>
           ) : (
             <>
-              <h1 className="text-5xl text-[#242220] font-semibold">
+              <h1 className="text-5xl text-white font-semibold">
                 No Popular Section
               </h1>
             </>
@@ -161,13 +177,13 @@ const Popular = () => {
 
         {/* Create New Popular Section */}
         <div className="rounded-2xl bg-transparent border border-[#ffffff]/[0.1] shadow-[0_7px_30px_rgba(0,0,0,0.3)] p-6">
-          <h3 className="text-xl font-semibold text-[#242220] mb-6">
+          <h3 className="text-xl font-semibold text-white mb-6">
             Create New Popular Section
           </h3>
           <form onSubmit={submitHandler} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-[#242220]/80 mb-2">
+                <label className="block text-sm font-medium text-white/80 mb-2">
                   Popular Heading
                 </label>
                 <input
@@ -181,7 +197,7 @@ const Popular = () => {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#242220]/80 mb-2">
+                <label className="block text-sm font-medium text-white/80 mb-2">
                   Popular Image URL
                 </label>
                 <input
@@ -197,7 +213,7 @@ const Popular = () => {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#242220]/80 mb-2">
+              <label className="block text-sm font-medium text-white/80 mb-2">
                 Popular Paragraph
               </label>
               <textarea

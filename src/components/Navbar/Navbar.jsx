@@ -76,7 +76,10 @@ const Navbar = () => {
   const [btntext, setBtntext] = useState("");
   const [btnlink, setBtnlink] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const loadData = async () => {
+    setLoading(true);
     const data = await getNavbar();
     console.log(data);
     setLogo(data?.logo);
@@ -84,6 +87,7 @@ const Navbar = () => {
     setBtntext(data?.btntext);
     setBtnlink(data?.btnlink);
     setUpdateid(data?._id);
+    setLoading(false);
   };
   useEffect(() => {
     loadData();
@@ -143,16 +147,29 @@ const Navbar = () => {
     setUpdateNavbar([...updateNavbar, { name: "", url: "" }]);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading Navbar...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 gap-10 ">
       <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
-        <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
+        <h1 className="text-3xl py-7 px-5 font-bold text-white">
           Navbar Dashboard
         </h1>
 
         <div className="px-5 pb-7">
           <div className="flex justify-between items-center mb-5">
-            <h2 className="text-2xl text-[#242220] font-semibold">
+            <h2 className="text-2xl text-white font-semibold">
               Current Navbar
             </h2>
           </div>
@@ -176,7 +193,7 @@ const Navbar = () => {
               className="space-y-4 p-5 backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] "
             >
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold  ">Logo URL</label>
+                <label className="text-white font-bold  ">Logo URL</label>
                 <input
                   type="text"
                   placeholder="Logo URL"
@@ -189,9 +206,7 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold  ">
-                  Navbar Links
-                </label>
+                <label className="text-white font-bold  ">Navbar Links</label>
                 {formData.navlinks.map((link, index) => (
                   <div key={index} className="flex gap-2 mb-2">
                     <input
@@ -229,7 +244,7 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold">Button Name</label>
+                <label className="text-white font-bold">Button Name</label>
                 <input
                   type="text"
                   placeholder="Button Name"
@@ -242,7 +257,7 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold">Button URL</label>
+                <label className="text-white font-bold">Button URL</label>
                 <input
                   type="text"
                   placeholder="Button URL"
@@ -273,7 +288,7 @@ const Navbar = () => {
             className="space-y-4 mt-10 p-5 w-[97%] mx-auto backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]"
           >
             <div className="flex flex-col gap-3">
-              <label className="text-[#242220] font-bold">Logo URL</label>
+              <label className="text-white font-bold">Logo URL</label>
               <input
                 type="text"
                 placeholder="Logo URL"
@@ -284,7 +299,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              <label className="text-[#242220] font-bold">Navbar Links</label>
+              <label className="text-white font-bold">Navbar Links</label>
               {updateNavbar?.map((link, index) => (
                 <div key={index} className="flex gap-2 mb-2">
                   <input
@@ -324,7 +339,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              <label className="text-[#242220] font-bold">Button Name</label>
+              <label className="text-white font-bold">Button Name</label>
               <input
                 type="text"
                 placeholder="Button Name"
@@ -335,7 +350,7 @@ const Navbar = () => {
             </div>
 
             <div className="flex flex-col gap-3">
-              <label className="text-[#242220] font-bold">Button URL</label>
+              <label className="text-white font-bold">Button URL</label>
               <input
                 type="text"
                 placeholder="Button URL"
@@ -359,7 +374,7 @@ const Navbar = () => {
           {/* Logo Section */}
           <div className="mb-8 flex justify-between items-start">
             <div className="flex-1">
-              <div className="font-bold text-xl uppercase tracking-wide mb-4 px-4">
+              <div className="font-bold text-white text-xl uppercase tracking-wide mb-4 px-4">
                 Logo
               </div>
               <div className="px-8 py-20 w-1/4 border border-amber-100/40 rounded-lg bg-white/20 backdrop-blur-sm shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -420,7 +435,7 @@ const Navbar = () => {
             ) : (
               <div>
                 <div className="grid grid-cols-2 gap-4 mb-4 px-4">
-                  <div className="font-bold text-xl uppercase tracking-wide">
+                  <div className="font-bold text-white text-xl uppercase tracking-wide">
                     Name
                   </div>
                 </div>
@@ -452,10 +467,10 @@ const Navbar = () => {
           {/* Button Section */}
           <div className="mt-8">
             <div className="grid grid-cols-2 gap-6 mb-4 px-4">
-              <div className="font-bold text-xl uppercase tracking-wide">
+              <div className="font-bold text-white text-xl uppercase tracking-wide">
                 Button Text
               </div>
-              <div className="font-bold text-xl uppercase tracking-wide">
+              <div className="font-bold text-white text-xl uppercase tracking-wide">
                 Button Link
               </div>
             </div>

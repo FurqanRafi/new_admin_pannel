@@ -7,9 +7,11 @@ import { useRouter } from "next/navigation";
 
 const Signup = () => {
   const { register } = useContext(AuthContext);
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const formData = new FormData(e.target);
     const res = await register(
       formData.get("username"),
@@ -24,6 +26,7 @@ const Signup = () => {
     } else {
       alert("Something went wrong. Please try again.");
     }
+    setLoading(false);
   };
 
   return (
@@ -66,10 +69,10 @@ const Signup = () => {
           />
 
           <button
-            className="px-3 py-2 rounded-lg bg-[#B75826] text-xl font-semibold"
+            className="px-3 py-2 rounded-lg bg-[#B75826] text-xl cursor-pointer font-semibold"
             type="submit"
           >
-            Sign Up
+            {loading ? "Signing up..." : "Sign Up"}
           </button>
           <div>
             Do you have an account ? <Link href="/login">Login</Link>

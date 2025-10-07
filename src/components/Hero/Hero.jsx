@@ -21,8 +21,10 @@ const Hero = () => {
   const [heroId, setHeroId] = useState(null);
   const [popup, setPop] = useState(false);
   const [updateHero, setUpdateHero] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loadData = async () => {
+    setLoading(true);
     const res = await getHero();
     if (res) {
       setHeroData(res); // Current Hero ke liye
@@ -86,6 +88,19 @@ const Hero = () => {
     }
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading Hero...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex items-start py-10 justify-center ">
       {popup && (
@@ -113,7 +128,7 @@ const Hero = () => {
       )}
       <div className="w-[95%] h-[95%] backdrop-blur-xl  border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
+        <h1 className="text-3xl py-7 px-5 font-bold text-white">
           Hero Section Dashboard
         </h1>
 
@@ -124,7 +139,7 @@ const Hero = () => {
               <>
                 {/* Header with Update/Delete buttons */}
                 <div className="flex justify-between items-center">
-                  <h2 className="text-2xl text-[#242220] font-semibold">
+                  <h2 className="text-2xl text-white font-semibold">
                     Current Hero Section
                   </h2>
                   <div className="flex gap-5">
@@ -147,7 +162,7 @@ const Hero = () => {
 
                 <div className="flex flex-col md:flex-row gap-10 items-center ">
                   {/* Left - Text Content */}
-                  <div className="flex-1 flex flex-col gap-6">
+                  <div className="flex-1 text-white flex flex-col gap-6">
                     <div className="mt-8">
                       <div className="font-bold text-xl uppercase tracking-wide">
                         Title
@@ -227,7 +242,7 @@ const Hero = () => {
             ) : (
               <>
                 {/* No Data UI */}
-                <h1 className="text-5xl text-[#242220] font-semibold">
+                <h1 className="text-5xl text-white font-semibold">
                   No Hero Section
                 </h1>
               </>
@@ -236,13 +251,13 @@ const Hero = () => {
 
           {/* Create Hero Section */}
           <div className="w-full h-[80%] mt-7 backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
-            <h1 className="text-[#242220] text-2xl font-semibold">
+            <h1 className="text-white text-2xl font-semibold">
               Create Hero Section
             </h1>
             <div className="w-full h-[80%] px-10 rounded-2xl bg-transparent border-[#ffffff]/[0.1] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] mt-7">
               <form onSubmit={submitHandler} className="space-y-4">
                 <div className="grid grid-cols-1 gap-5 py-10">
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Title</label>
                     <input
                       type="text"
@@ -254,7 +269,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Heading</label>
                     <input
                       type="text"
@@ -266,7 +281,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Description</label>
                     <input
                       type="text"
@@ -281,7 +296,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Button Text</label>
                     <input
                       type="text"
@@ -293,7 +308,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Button Link</label>
                     <input
                       type="text"
@@ -305,7 +320,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Hero Image URL</label>
                     <input
                       type="text"
@@ -317,7 +332,7 @@ const Hero = () => {
                       className="w-full p-2 border border-[#ffffff] rounded-xl"
                     />
                   </div>
-                  <div className="flex flex-col gap-3">
+                  <div className="flex text-white flex-col gap-3">
                     <label>Side Image URL</label>
                     <input
                       type="text"

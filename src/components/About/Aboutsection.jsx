@@ -361,8 +361,10 @@ const Aboutsection = () => {
   const [aboutId, setAboutId] = useState(null);
   const [popup, setPopup] = useState(false);
   const [create, setCreate] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const loadData = async () => {
+    setLoading(true);
     const res = await getAbout();
     console.log(res, "get about");
     if (res) {
@@ -372,6 +374,7 @@ const Aboutsection = () => {
       setAboutData(false);
       setAboutId(null);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -408,6 +411,19 @@ const Aboutsection = () => {
     setPopup(false);
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading ABOUT...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-start py-10 gap-10">
       {/* Delete Popup */}
@@ -437,13 +453,13 @@ const Aboutsection = () => {
 
       {/* Create/Update Section */}
       <div className="w-[95%] backdrop-blur-xl border-[#F5EFEB]/[0.20] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
-        <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
+        <h1 className="text-3xl py-7 px-5 font-bold text-white">
           About Section Dashboard
         </h1>
 
         <div className="px-5 pb-7">
           <div className="flex justify-between items-center mb-5">
-            <h2 className="text-2xl text-[#242220] font-semibold">
+            <h2 className="text-2xl text-white font-semibold">
               Current About Section
             </h2>
           </div>
@@ -466,9 +482,7 @@ const Aboutsection = () => {
               className="space-y-4 p-5 backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border shadow-[0_7px_30px_rgba(0,0,0,0.3)]"
             >
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold">
-                  About Heading
-                </label>
+                <label className="text-white font-bold">About Heading</label>
                 <input
                   type="text"
                   placeholder="Enter about heading"
@@ -481,9 +495,7 @@ const Aboutsection = () => {
               </div>
 
               <div className="flex flex-col gap-3">
-                <label className="text-[#242220] font-bold">
-                  About Paragraph
-                </label>
+                <label className="text-white font-bold">About Paragraph</label>
                 <textarea
                   rows="4"
                   placeholder="Enter about paragraph"
@@ -497,9 +509,7 @@ const Aboutsection = () => {
 
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-bold">
-                    Main Image URL
-                  </label>
+                  <label className="text-white font-bold">Main Image URL</label>
                   <input
                     type="text"
                     placeholder="Enter main image URL"
@@ -511,7 +521,7 @@ const Aboutsection = () => {
                   />
                 </div>
                 <div className="flex flex-col gap-3">
-                  <label className="text-[#242220] font-bold">
+                  <label className="text-white font-bold">
                     Upper Image URL
                   </label>
                   <input
@@ -529,7 +539,7 @@ const Aboutsection = () => {
               <div className="grid md:grid-cols-3 gap-4">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="flex flex-col gap-3">
-                    <label className="text-[#242220] font-bold">
+                    <label className="text-white font-bold">
                       Gallery Image {i}
                     </label>
                     <input
@@ -567,7 +577,7 @@ const Aboutsection = () => {
               {/* Header with Update/Delete buttons */}
               <div className="mb-8 flex justify-between items-start">
                 <div className="flex-1">
-                  <div className="font-bold text-xl uppercase tracking-wide mb-4 px-4">
+                  <div className="font-bold text-white text-xl uppercase tracking-wide mb-4 px-4">
                     About Content
                   </div>
                 </div>
@@ -601,7 +611,7 @@ const Aboutsection = () => {
               {/* Title Section */}
               <div className="mb-8">
                 <div className="grid grid-cols-1 gap-4 mb-4 px-4">
-                  <div className="font-bold text-xl uppercase tracking-wide">
+                  <div className="font-bold text-white text-xl uppercase tracking-wide">
                     Title
                   </div>
                 </div>
@@ -613,7 +623,7 @@ const Aboutsection = () => {
               {/* Description Section */}
               <div className="mb-8">
                 <div className="grid grid-cols-1 gap-4 mb-4 px-4">
-                  <div className="font-bold text-xl uppercase tracking-wide">
+                  <div className="font-bold text-white text-xl uppercase tracking-wide">
                     Description
                   </div>
                 </div>
@@ -624,7 +634,7 @@ const Aboutsection = () => {
 
               {/* Main Images Section */}
               <div className="mb-8">
-                <div className="font-bold text-xl uppercase tracking-wide mb-4 px-4">
+                <div className="font-bold text-white text-xl uppercase tracking-wide mb-4 px-4">
                   Main Images
                 </div>
                 <div className="grid grid-cols-2 gap-6">
@@ -647,7 +657,7 @@ const Aboutsection = () => {
 
               {/* Gallery Images Section */}
               <div>
-                <div className="font-bold text-xl uppercase tracking-wide mb-4 px-4">
+                <div className="font-bold text-white text-xl uppercase tracking-wide mb-4 px-4">
                   Gallery Images
                 </div>
                 <div className="grid grid-cols-3 gap-4">
@@ -676,7 +686,7 @@ const Aboutsection = () => {
             </>
           ) : (
             <div className="text-center py-20">
-              <h2 className="text-3xl text-gray-500">
+              <h2 className="text-3xl text-white ">
                 No About Section Available
               </h2>
             </div>

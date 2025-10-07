@@ -22,9 +22,11 @@ const Footer = () => {
   const [footerId, setFooterId] = useState(null);
   const [popup, setPopup] = useState(false);
   const [updateFooter, setUpdateFooter] = useState(false);
+  const [loading, setloading] = useState(false);
 
   const loadData = async () => {
     try {
+      setloading(true);
       const data = await getFooter();
       console.log("Get Footer Data", data);
       console.log(data);
@@ -37,6 +39,8 @@ const Footer = () => {
       }
     } catch (error) {
       console.log(error);
+    } finally {
+      setloading(false);
     }
   };
 
@@ -175,6 +179,19 @@ const Footer = () => {
     setFormData({ ...formData, quicklinks: updatedLinks });
   };
 
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-amber-100 flex items-center justify-center">
+        <div className="text-center backdrop-blur-xl bg-white/40 border border-white/30 rounded-2xl p-12 shadow-[0_8px_32px_rgba(0,0,0,0.1)]">
+          <div className="animate-spin rounded-full h-20 w-20 border-b-4 border-[#B75826] mx-auto"></div>
+          <p className="mt-6 text-[#242220] font-bold text-lg uppercase tracking-wide">
+            Loading Footer...
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full min-h-screen flex items-start py-10 justify-center backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
       {popup && (
@@ -202,7 +219,7 @@ const Footer = () => {
       )}
       <div className="w-[95%] h-auto backdrop-blur-xl  border-[#ffffff]/[0.1] border shadow-[0_7px_30px_rgba(0,0,0,0.3)] rounded-xl">
         {/* Header */}
-        <h1 className="text-3xl py-7 px-5 font-bold text-[#242220]">
+        <h1 className="text-3xl py-7 px-5 font-bold text-white">
           Footer Dashboard
         </h1>
 

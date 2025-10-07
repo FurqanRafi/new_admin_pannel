@@ -192,7 +192,7 @@ const Navbar = () => {
               onSubmit={handleSubmit}
               className="space-y-4 p-5 backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)] "
             >
-              <div className="flex flex-col gap-3">
+              <div className="flex text-white flex-col gap-3">
                 <label className="text-white font-bold  ">Logo URL</label>
                 <input
                   type="text"
@@ -201,11 +201,11 @@ const Navbar = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, logo: e.target.value })
                   }
-                  className="w-full p-2 border rounded-md"
+                  className="w-full p-2 border border-[#ffffff]/30 rounded-md"
                 />
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex text-white flex-col gap-3">
                 <label className="text-white font-bold  ">Navbar Links</label>
                 {formData.navlinks.map((link, index) => (
                   <div key={index} className="flex gap-2 mb-2">
@@ -216,14 +216,14 @@ const Navbar = () => {
                       onChange={(e) =>
                         updateLink(index, "name", e.target.value)
                       }
-                      className="flex-1 p-2 border rounded-md"
+                      className="flex-1 p-2  border border-[#ffffff]/30 rounded-md"
                     />
                     <input
                       type="text"
                       placeholder="Link URL"
                       value={link.url}
                       onChange={(e) => updateLink(index, "url", e.target.value)}
-                      className="flex-1 p-2 border rounded-md"
+                      className="flex-1 p-2  border border-[#ffffff]/30 rounded-md"
                     />
                     <button
                       type="button"
@@ -243,7 +243,7 @@ const Navbar = () => {
                 </button>
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex text-white flex-col gap-3">
                 <label className="text-white font-bold">Button Name</label>
                 <input
                   type="text"
@@ -252,11 +252,11 @@ const Navbar = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, btntext: e.target.value })
                   }
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2  border border-[#ffffff]/30 rounded"
                 />
               </div>
 
-              <div className="flex flex-col gap-3">
+              <div className="flex  text-white flex-col gap-3">
                 <label className="text-white font-bold">Button URL</label>
                 <input
                   type="text"
@@ -265,7 +265,7 @@ const Navbar = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, btnlink: e.target.value })
                   }
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2  border border-[#ffffff]/30 rounded"
                 />
               </div>
 
@@ -287,25 +287,25 @@ const Navbar = () => {
             onSubmit={(e) => e.preventDefault()}
             className="space-y-4 mt-10 p-5 w-[97%] mx-auto backdrop-blur-xl rounded-xl bg-[#FFEDE0]/[0.3] border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]"
           >
-            <div className="flex flex-col gap-3">
+            <div className="flex text-white flex-col gap-3">
               <label className="text-white font-bold">Logo URL</label>
               <input
                 type="text"
                 placeholder="Logo URL"
-                className="w-full p-2 border rounded-md"
+                className="w-full p-2  border border-[#ffffff]/30 rounded-md"
                 value={updateLogo || ""} // fallback empty string
                 onChange={(e) => setUpdateLogo(e.target.value)}
               />
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex text-white flex-col gap-3">
               <label className="text-white font-bold">Navbar Links</label>
               {updateNavbar?.map((link, index) => (
                 <div key={index} className="flex gap-2 mb-2">
                   <input
                     type="text"
                     placeholder="Link Name"
-                    className="flex-1 p-2 border rounded-md"
+                    className="flex-1 p-2  border border-[#ffffff]/30 rounded-md"
                     value={link.name}
                     onChange={(e) =>
                       updateExistingLink(index, "name", e.target.value)
@@ -314,7 +314,7 @@ const Navbar = () => {
                   <input
                     type="text"
                     placeholder="Link URL"
-                    className="flex-1 p-2 border rounded-md"
+                    className="flex-1 p-2  border border-[#ffffff]/30 rounded-md"
                     value={link.url}
                     onChange={(e) =>
                       updateExistingLink(index, "url", e.target.value)
@@ -323,7 +323,7 @@ const Navbar = () => {
                   <button
                     type="button"
                     onClick={() => removeUpdateLink(index)}
-                    className="px-3 py-1 bg-[#B75826] hover:bg-red-500 text-white rounded-md"
+                    className="px-3 py-1  bg-[#B75826] hover:bg-red-500 text-white rounded-md"
                   >
                     ×
                   </button>
@@ -338,23 +338,23 @@ const Navbar = () => {
               </button>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex text-white flex-col gap-3">
               <label className="text-white font-bold">Button Name</label>
               <input
                 type="text"
                 placeholder="Button Name"
-                className="w-full p-2 border rounded"
+                className="w-full p-2  border border-[#ffffff]/30 rounded"
                 value={updateBtnText}
                 onChange={(e) => setUpdateBtnText(e.target.value)}
               />
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div className="flex text-white flex-col gap-3">
               <label className="text-white font-bold">Button URL</label>
               <input
                 type="text"
                 placeholder="Button URL"
-                className="w-full p-2 border rounded"
+                className="w-full p-2  border border-[#ffffff]/30 rounded"
                 value={updateBtnLink}
                 onChange={(e) => setUpdateBtnLink(e.target.value)}
               />

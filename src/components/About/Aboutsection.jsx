@@ -490,7 +490,7 @@ const Aboutsection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, title: e.target.value })
                   }
-                  className="w-full p-2 text-white border rounded-md"
+                  className="w-full p-2 text-white  border border-[#ffffff]/30 rounded-md"
                 />
               </div>
 
@@ -503,7 +503,7 @@ const Aboutsection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, description: e.target.value })
                   }
-                  className="w-full p-2 text-white border rounded-md resize-none"
+                  className="w-full p-2 text-white  border border-[#ffffff]/30 rounded-md resize-none"
                 ></textarea>
               </div>
 
@@ -517,7 +517,7 @@ const Aboutsection = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, aboutimg: e.target.value })
                     }
-                    className="w-full p-2 border rounded-md text-white"
+                    className="w-full p-2  border border-[#ffffff]/30 rounded-md text-white"
                   />
                 </div>
                 <div className="flex flex-col gap-3">
@@ -531,7 +531,7 @@ const Aboutsection = () => {
                     onChange={(e) =>
                       setFormData({ ...formData, upperimg: e.target.value })
                     }
-                    className="w-full p-2 border rounded-md text-white"
+                    className="w-full p-2  border border-[#ffffff]/30 rounded-md text-white"
                   />
                 </div>
               </div>
@@ -552,7 +552,7 @@ const Aboutsection = () => {
                           [`img${i}`]: e.target.value,
                         })
                       }
-                      className="w-full p-2 border rounded-md text-white"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-md text-white"
                     />
                   </div>
                 ))}

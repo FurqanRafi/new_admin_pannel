@@ -218,7 +218,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card1.jpg"
-                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white  border border-[#ffffff]/30 rounded-xl"
                       value={formData.cardimg1 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg1: e.target.value });
@@ -230,7 +230,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card2.jpg"
-                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white  border border-[#ffffff]/30 rounded-xl"
                       value={formData.cardimg2 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg2: e.target.value });
@@ -242,7 +242,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card3.jpg"
-                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white  border border-[#ffffff]/30 rounded-xl"
                       value={formData.cardimg3 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg3: e.target.value });
@@ -254,7 +254,7 @@ const Cards = () => {
                     <input
                       type="text"
                       placeholder="https://example.com/card4.jpg"
-                      className="w-full p-3 text-white border border-[#ffffff] rounded-xl"
+                      className="w-full p-3 text-white  border border-[#ffffff]/30 rounded-xl"
                       value={formData.cardimg4 ?? ""}
                       onChange={(e) => {
                         setFormData({ ...formData, cardimg4: e.target.value });

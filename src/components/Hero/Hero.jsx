@@ -251,7 +251,7 @@ const Hero = () => {
           </div>
 
           {/* Create Hero Section */}
-          <div className="w-full h-[80%] mt-7 backdrop-blur-xl rounded-xl  border-[#F5EFEB]/[0.20] border-1 shadow-[0_7px_30px_rgba(0,0,0,0.3)]">
+          <div className="w-full h-[80%] mt-7  ">
             <h1 className="text-white text-2xl font-semibold">
               Create Hero Section
             </h1>
@@ -267,7 +267,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, title: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -279,7 +279,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, heading: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -294,7 +294,7 @@ const Hero = () => {
                           description: e.target.value,
                         });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -306,7 +306,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, btntext: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -318,7 +318,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, btnlink: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -330,7 +330,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, heroimg: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
                   <div className="flex text-white flex-col gap-3">
@@ -342,7 +342,7 @@ const Hero = () => {
                       onChange={(e) => {
                         setFormData({ ...fromData, sideimg: e.target.value });
                       }}
-                      className="w-full p-2 border border-[#ffffff] rounded-xl"
+                      className="w-full p-2  border border-[#ffffff]/30 rounded-xl"
                     />
                   </div>
 
